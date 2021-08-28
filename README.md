@@ -35,8 +35,8 @@ in. The two paths cannot be identical; moreover, if the `<source>` is a folder, 
 for `<source>`;
 
 - `<options file>`: Optional. Path to a local file in JSON format to load
-additional configuration from. See file: `samples/sample-options.json` for more
-details (the file has its own documentation, because AUNTIE happily accepts
-C-style comments inside the `<options file>`. See also file:
-`samples/sample-template.html`, which you can use as a starting point for your
+additional configuration from. See file: [src/samples/sample-options.json](https://github.com/ciacob/auntie/blob/master/src/samples/sample-options.json) for more
+details (the file has its own documentation, because AUNTIE happily **accepts
+C-style comments inside the `<options file>`**. See also file:
+[src/samples/sample-template.html](https://github.com/ciacob/auntie/blob/master/src/samples/sample-template.html), which you can use as a starting point for your
 own HTML templates.
