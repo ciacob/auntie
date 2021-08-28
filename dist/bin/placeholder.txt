@@ -1,0 +1,1 @@
+This folder is intentionally left empty. Install pkg (https://github.com/vercel/pkg) and run "make-dist.bat" to build your own self-contained executable.

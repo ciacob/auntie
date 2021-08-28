@@ -1,0 +1,115 @@
+{
+	/*
+	String, "html" or "pdf". Default: "html".
+	For the time being, only HTML conversion is supported.
+	*/
+	"outputType": "html",
+
+	/*
+	Array of Strings. Default: ["txt"]
+	*/
+	"sourceFileTypes": ["txt"],
+	
+	/*
+	String. Default empty.
+	Text to be rendered for empty files. May contain either HTML, 
+	MarkDown or MTF syntax. When empty, the program provides a default 
+	value. To make empty files produce empty-looking documents, set this
+	value to "&nbsp;".
+	*/
+	"fileContentPlaceholder": "",
+
+	/*
+	Array. Default empty.
+	Strings to be added to the internal dictionary of words that should
+	be capitalized in any situation. When the program adjusts headers to
+	make sure they are in title case, the entries in this dictionary are
+	kept in all-caps.
+	*/
+	"customAcronyms": ["maidens"],
+
+	/*
+	Boolean. Default: false.
+	Only applies to batch operations (i.e., when you supply a folder as
+	your <source> argument).
+	*/
+	"outputBatchLog": true,
+
+	/*
+	Object
+	*/
+	"htmlSettings" : {
+		
+		/* 
+		String. Default null.
+
+		Path to an html file whose content is to be used for wraping 
+		each converted document in turn, along with generated navigation.
+		This file will not be parsed/converted and, if located inside the 
+		<source> folder, it will be skipped. If you provide a relative path
+		here, it will be resolved to the current working directory, NOT
+		to the location of the options file.
+
+		The folowing placeholders can be used inside an HTML template file:
+
+		- $$rootDir$$: resolves to the relative path to the root directory
+		  of the compilation. Useful for refering to template assets (CSS
+		  & JavaScript files, images, etc) from within each compiled
+		  document, e.g.: 
+
+		  <link rel="stylesheet" href="$$rootDir$$assets/mystyle.css">.
+
+		  Whereas the folowing placeholders can only be used in template
+		  code, this one will also work within individual documents,
+		  allowing you to more easily insert relative MarkDown links to
+		  other documents in the compilation, e.g.:
+
+		  [Concepts]($$rootDir$$1. introduction/concepts.html)
+
+		  Upon conversion to HTML, the above MarkDown link will turn into
+		  something like:
+
+		  <a href="../../../concepts.html">Concepts</a> .
+
+		  DO NOT add a slash after "$$rootDir$$".
+
+
+		- $$rootName: resolves to the name of the <source> file or folder;
+
+		- $$docName: resolves to the name of the current document;
+		  resolves to an empty string outside batch operations;
+
+		- $$navigation: resolves to a generated navigation tree, with 
+		  links adapted to current document's location; resolves to an 
+		  empty string outside batch operations;
+
+		- $$document: the actual converted HTML content. The content is
+		  not enclosed in a container element and contains no CSS styles 
+		  or JavaScript;
+
+		- $$lastUpdated: resolves to the UTC timestamp of the current 
+		  document's last modification time.
+
+		If a setting is not provided, the program will supply an 
+		internal, bare bone template. 
+		*/
+		"templateFile": null,
+		
+		/*
+		Boolean. Default false.
+		If set to `true`, numbering will be stripped off from the 
+		generated HTML navigation tree items.
+		*/
+		"hideNavigationNumbering": false,
+
+		/*
+		Boolean. Default false.
+		If set to `true`, any files found in the <source> folder that are
+		not subject to be converted will be copied over to the <target>
+		folder unchanged, while preserving the original folder structure.
+		Useful if you also want to deposit assets (e.g., images) in your
+		<source> folder, beside the source files for your documents.
+		*/
+		"passThroughAssets": false
+	}
+}

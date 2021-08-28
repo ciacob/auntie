@@ -1,0 +1,21 @@
+{
+  "name": "AUNTIE",
+  "version": "1.0.0",
+  "description": "AUtomatic documeNtaTIon gEnerator. Simple static website generator, best suited for producing technical documentation.",
+  "main": "auntie.js",
+  "scripts": {
+    "test": "node auntie.js"
+  },
+  "keywords": [],
+  "author": "Claudius Tiberiu Iacob",
+  "license": "MIT",
+  "dependencies": {
+    "commonmark": "^0.30.0",
+    "html-prettify": "^1.0.3",
+    "n-readlines": "^1.0.1",
+    "sanitize-filename": "^1.6.3",
+    "sprintf-js": "^1.1.2",
+    "strip-json-comments": "^3.1.1",
+    "wrap-text": "^1.0.9"
+  }
+}
