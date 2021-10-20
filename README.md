@@ -5,7 +5,7 @@
 
 This application is a simple static website generator, best suited for producing
 technical documentation. You provide content as *.txt files and presentation via
-a custom HTML template.
+custom HTML templates.
 
 The text files need to be authored using the [CommonMark](https://commonmark.org)
 syntax (a standardized version of Markdown).
