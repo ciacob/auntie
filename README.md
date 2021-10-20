@@ -1,3 +1,5 @@
+![Auntie Logo](identity/imagery/auntie.jpg)
+
 # AUNTIE
 ## Automatic docUmeNTatIon gEnerator
 
