@@ -25,7 +25,7 @@ upload to your web server.
 
 Where:
 - `<source>`: Path to a local file or folder to supply the text for converting. For
-the path, use an application-relative link, or an absolute file path. By default,
+the path, use an current working directory-relative link, or an absolute file path. By default,
 all `*.txt` files found are converted and included in the resulting compilation,
 but this behavior can be changed using the `<options>` file (see the
 `sourceFileTypes` setting). As for marking a file for exclusion, you can type
@@ -39,6 +39,6 @@ for `<source>`;
 - `<options file>`: Optional. Path to a local file in JSON format to load
 additional configuration from. See file: [src/samples/sample-options.json](https://github.com/ciacob/auntie/blob/master/src/samples/sample-options.json) for more
 details (the file has its own documentation, because AUNTIE happily **accepts
-C-style comments inside the `<options file>`**. See also file:
+C-style comments inside its `<options file>`**. See also file:
 [src/samples/sample-template.html](https://github.com/ciacob/auntie/blob/master/src/samples/sample-template.html), which you can use as a starting point for your
 own HTML templates.
